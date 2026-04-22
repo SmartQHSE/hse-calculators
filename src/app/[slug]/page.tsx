@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CALCULATORS, getCalculator } from "@/core/registry";
 import CalculatorForm from "@/components/CalculatorForm";
+import EmbedSnippet from "@/components/EmbedSnippet";
 
 export function generateStaticParams() {
   return CALCULATORS.map((c) => ({ slug: c.slug }));
@@ -117,6 +118,8 @@ export default async function CalculatorPage({
           </p>
         </div>
       </section>
+
+      <EmbedSnippet slug={calc.slug} name={calc.name} />
 
       <section className="mt-10 p-6 rounded-xl bg-[#0F2A44] text-white">
         <h2 className="text-lg font-semibold mb-2">Need more than a calculator?</h2>
