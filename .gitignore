@@ -1,0 +1,16 @@
+node_modules
+.next
+.turbo
+dist
+build
+out
+coverage
+*.log
+.DS_Store
+.env
+.env.local
+.vercel
+*.tsbuildinfo
+.idea
+.vscode/*
+!.vscode/settings.json.example

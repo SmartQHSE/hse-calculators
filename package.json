@@ -1,0 +1,133 @@
+{
+  "name": "@smartqhse/hse-calculators",
+  "version": "0.1.0",
+  "description": "Free open-source library of 30+ HSE (Health, Safety, Environment) calculators — TRIR, LTIR, LTIFR, DART, EMR, severity rate, heat stress WBGT, noise exposure, hand-arm vibration, REBA, RULA, NIOSH lifting, fire load, evacuation time, risk matrix, and more. Pure TypeScript, zero runtime dependencies, regulation-cited (OSHA, HSE UK, ISO 45001, ILO, NIOSH, ACGIH).",
+  "keywords": [
+    "hse",
+    "ehs",
+    "qhse",
+    "safety",
+    "occupational-safety",
+    "health-and-safety",
+    "workplace-safety",
+    "iso-45001",
+    "osha",
+    "osha-300a",
+    "trir",
+    "trir-calculator",
+    "ltir",
+    "ltir-calculator",
+    "ltifr",
+    "ltifr-calculator",
+    "dart-rate",
+    "dart-calculator",
+    "emr",
+    "experience-modification-rate",
+    "severity-rate",
+    "frequency-rate",
+    "incident-rate-calculator",
+    "riddor",
+    "riddor-calculator",
+    "wbgt",
+    "heat-stress",
+    "heat-stress-calculator",
+    "noise-exposure",
+    "noise-dose",
+    "hand-arm-vibration",
+    "hav-calculator",
+    "whole-body-vibration",
+    "reba",
+    "reba-calculator",
+    "rula",
+    "rula-calculator",
+    "niosh",
+    "niosh-lifting-equation",
+    "manual-handling",
+    "ergonomics",
+    "risk-matrix",
+    "risk-assessment",
+    "fire-load",
+    "evacuation-time",
+    "manhours-calculator",
+    "carbon-footprint",
+    "ghg-protocol",
+    "ergonomic-risk",
+    "iso-45001-compliance",
+    "osha-compliance",
+    "hse-software",
+    "ehs-software",
+    "safety-management",
+    "safety-metrics",
+    "kpi",
+    "typescript",
+    "zero-dependencies"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "SmartQHSE Ltd",
+    "url": "https://www.smartqhse.com"
+  },
+  "homepage": "https://tools.smartqhse.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartQHSE/hse-calculators.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SmartQHSE/hse-calculators/issues"
+  },
+  "main": "./dist/core/index.js",
+  "module": "./dist/core/index.js",
+  "types": "./dist/core/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "require": "./dist/core/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:lib": "tsup src/core/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "publish:lib": "pnpm build:lib && npm publish --access=public"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false
+}
